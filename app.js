@@ -13,13 +13,13 @@ const readFileExcel = async () => {
 
   const dataJSON = JSON.parse(data);
 
-  dataJSON.data.forEach((element) => {
-    element.id = element.id.toString();
-    element.amount = (element.amount / 100).toString();
-    element.nominal = (element.nominal / 100).toString();
-    element.rate = element.rate.toString();
-    element.currency = element.currency.toString();
-  });
+//   dataJSON.data.forEach((element) => {
+//     element.id = element.id.toString();
+//     element.amount = (element.amount / 100).toString();
+//     element.nominal = (element.nominal / 100).toString();
+//     element.rate = element.rate.toString();
+//     element.currency = element.currency.toString();
+//   });
 
   const xls = await json2xls(dataJSON.data, {
     output: "base64",
